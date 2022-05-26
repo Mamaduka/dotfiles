@@ -23,6 +23,7 @@ brew 'composer'
 
 # Apps
 cask '1password'
+cask 'iterm2'
 cask 'dbngin'
 cask 'firefox'
 cask 'google-chrome'

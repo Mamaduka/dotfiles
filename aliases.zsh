@@ -6,8 +6,8 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias sites="cd $HOME/Sites"
-alias projects="cd $HOME/Sites"
+alias projects="cd $HOME/Projects"
 
 # Custom commands
-alias createsite="sh ~/Projects/bin/create.sh"
-alias deletesite="sh ~/Projects/bin/delete.sh"
+alias wpsite="sh $DOTFILES/bin/setup.sh"
+alias wpremove="sh $DOTFILES/bin/remove.sh"

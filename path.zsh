@@ -6,12 +6,16 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 
-# DBngin
+# DBngin paths
 export PATH="/Users/Shared/DBngin/mysql/8.0.19/bin:$PATH"
+export PATH="/Users/Shared/DBngin/mysql/8.0.27/bin:$PATH"
 
 # GPG
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+# This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

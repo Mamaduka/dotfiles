@@ -14,6 +14,7 @@ brew 'git'
 brew 'gnupg'
 brew 'grep'
 brew 'tldr'
+brew 'wp-cli'
 
 # Development
 brew 'php'

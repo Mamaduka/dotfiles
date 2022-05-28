@@ -47,7 +47,6 @@ status "➤ Installing WordPress..."
 wp core download
 wp config create --dbname=$site_name --dbuser=root --dbpass='' --dbhost=127.0.0.1 --extra-php <<PHP
 define( 'WP_POST_REVISIONS', false );
-define( 'WP_DEBUG', true );
 
 if ( WP_DEBUG ) {
 	@error_reporting( E_ALL );

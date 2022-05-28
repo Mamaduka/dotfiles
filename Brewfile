@@ -13,12 +13,14 @@ brew 'gh'
 brew 'git'
 brew 'gnupg'
 brew 'grep'
+brew 'tldr'
 
 # Development
 brew 'php'
 brew 'php@8.0'
 brew 'php@7.4'
 brew 'composer'
+brew 'nginx'
 
 # Apps
 cask '1password'

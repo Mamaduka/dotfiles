@@ -1,5 +1,8 @@
+# Load dotfiles binaries
+# export PATH="$DOTFILES/bin:$PATH"
+
 # Composer
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 

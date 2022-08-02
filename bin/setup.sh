@@ -46,6 +46,7 @@ echo "CREATE DATABASE $site_name" | mysql -h127.0.0.1 -uroot
 status "➤ Installing WordPress..."
 wp core download
 wp config create --dbname=$site_name --dbuser=root --dbpass='' --dbhost=127.0.0.1 --extra-php <<PHP
+define( 'WP_DEBUG', true );
 define( 'WP_POST_REVISIONS', false );
 
 if ( WP_DEBUG ) {

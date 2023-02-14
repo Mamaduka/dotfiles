@@ -29,4 +29,6 @@ ZSH_CUSTOM=$DOTFILES
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions)
 
+eval "$(fnm env --use-on-cd)"
+
 source $ZSH/oh-my-zsh.sh

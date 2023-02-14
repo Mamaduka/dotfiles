@@ -9,17 +9,18 @@ brew 'bash' # Latest Bash version
 brew 'bat' # A cat(1) clone with wings.
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
+brew 'fnm'
 brew 'gh'
 brew 'git'
 brew 'gnupg'
+brew 'pinentry-mac'
 brew 'grep'
 brew 'tldr'
 brew 'wp-cli'
 
 # Development
 brew 'php'
-brew 'php@8.0'
-brew 'php@7.4'
+brew 'php@8.1'
 brew 'composer'
 brew 'nginx'
 
@@ -29,7 +30,6 @@ cask 'iterm2'
 cask 'dbngin'
 cask 'firefox'
 cask 'google-chrome'
-cask 'gpg-suite'
 cask 'ray'
 cask 'raycast'
 cask 'slack'

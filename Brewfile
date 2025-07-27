@@ -1,7 +1,3 @@
-# Taps
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-
 # Binaries
 brew 'bash' # Latest Bash version
 brew 'bat' # A cat(1) clone with wings.

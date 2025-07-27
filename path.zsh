@@ -10,10 +10,6 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH="/Users/Shared/DBngin/mysql/8.0.19/bin:$PATH"
 export PATH="/Users/Shared/DBngin/mysql/8.0.27/bin:$PATH"
 
-# GPG
-export GPG_TTY=$(tty)
-gpgconf --launch gpg-agent
-
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

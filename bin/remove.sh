@@ -13,7 +13,7 @@ fi
 echo "Removing '$site_name' site..."
 
 # Change this to a directory where your sites live.
-cd ~/Sites
+cd ~/Projects
 valet unlink $site_name
 rm -rf $site_name
 

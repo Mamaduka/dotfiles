@@ -35,4 +35,4 @@ brew bundle --file $DOTFILES/Brewfile
 $HOME/.composer/vendor/bin/valet install
 
 # Create a Sites directory
-mkdir $HOME/Sites
+mkdir $HOME/Projects

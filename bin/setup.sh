@@ -5,7 +5,7 @@
 
 set -e
 
-cd ~/Sites
+cd ~/Projects
 
 site_name=$1
 

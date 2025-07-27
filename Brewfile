@@ -1,8 +1,6 @@
 # Taps
-tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -12,10 +10,10 @@ brew 'ffmpeg'
 brew 'fnm'
 brew 'gh'
 brew 'git'
-brew 'gnupg'
-brew 'pinentry-mac'
 brew 'grep'
+brew 'httpie'
 brew 'tldr'
+brew 'svn'
 brew 'wp-cli'
 
 # Development

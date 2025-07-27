@@ -9,6 +9,7 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 # DBngin paths
 export PATH="/Users/Shared/DBngin/mysql/8.0.19/bin:$PATH"
 export PATH="/Users/Shared/DBngin/mysql/8.0.27/bin:$PATH"
+export PATH="/Users/Shared/DBngin/mysql/8.0.40_arm64/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm

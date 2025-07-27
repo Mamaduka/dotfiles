@@ -20,11 +20,11 @@ brew 'nginx'
 
 # Apps
 cask '1password'
+cask 'brave-browser'
 cask 'cleanshot'
 cask 'dbngin'
 cask 'firefox'
 cask 'google-chrome'
-cask 'harvest'
 cask 'iina'
 cask 'iterm2'
 cask 'numi'

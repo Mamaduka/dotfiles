@@ -34,5 +34,5 @@ brew bundle --file $DOTFILES/Brewfile
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Create a Sites directory
+# Create a projects directory
 mkdir $HOME/Projects

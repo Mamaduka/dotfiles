@@ -45,4 +45,4 @@ mkdir -p $HOME/Projects
 mkdir -p $HOME/Sites
 
 # Import iTerm2 color scheme (opens iTerm; manually select profile after).
-open $DOTFILES/duka.itermcolors
+open $DOTFILES/material-palette.itermcolors

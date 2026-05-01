@@ -24,7 +24,7 @@ sh $DOTFILES/fresh.sh
 
 - **1Password**: sign in, enable "Use the SSH agent" in Developer settings.
 - **Git signing**: in 1Password, "Configure Commit Signing" — adds signingkey + commit.gpgsign to `~/.gitconfig`.
-- **iTerm2**: Preferences → Profiles → Colors → Color Presets → select `duka`.
+- **iTerm2**: Preferences → Profiles → Colors → Color Presets → select `material-palette`.
 - **DBngin**: launch app, create a MySQL 8 instance on port 3306.
 
 ## Commands
@@ -45,4 +45,4 @@ sh $DOTFILES/fresh.sh
 | `fresh.sh` | bootstrap script |
 | `bin/setup.sh` | invoked by `wpsite` alias |
 | `bin/remove.sh` | invoked by `wpremove` alias |
-| `duka.itermcolors` | iTerm2 color scheme |
+| `material-palette.itermcolors` | iTerm2 color scheme — modified [Material Design Colors](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Material%20Design%20Colors.itermcolors) using canonical [Material Design](https://m2.material.io/design/color/the-color-system.html) swatches (Blue Grey 900 bg, A200 accents). |

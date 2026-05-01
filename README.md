@@ -25,6 +25,7 @@ sh $DOTFILES/fresh.sh
 - **1Password**: sign in, enable "Use the SSH agent" in Developer settings.
 - **Git signing**: in 1Password, "Configure Commit Signing" — adds signingkey + commit.gpgsign to `~/.gitconfig`.
 - **iTerm2**: Preferences → Profiles → Colors → Color Presets → select `material-palette`.
+- **iTerm2 font**: Preferences → Profiles → Text → Font → JetBrainsMono Nerd Font.
 - **DBngin**: launch app, create a MySQL 8 instance on port 3306.
 
 ## Commands

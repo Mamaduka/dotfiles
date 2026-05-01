@@ -1,2 +1,38 @@
 # Starship prompt config — https://starship.rs/config/
-# Empty = defaults. Override modules below as needed.
+
+# Explicit format — language modules omitted entirely.
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$character"""
+
+# Show command duration when ≥500ms (default is 2000).
+[cmd_duration]
+min_time = 500
+
+# Material A200 accents.
+[directory]
+style = "bold #40C4FF"   # Light Blue A200
+
+[git_branch]
+style = "bold #FF80AB"   # Pink A200
+
+[git_status]
+# Per-state Material colors. Top-level style is neutral; each indicator brings its own.
+style = ""
+format = '(\[[$all_status$ahead_behind]($style)\] )'
+staged     = "[+$count](#69F0AE)"   # Green A200 — ready to commit
+modified   = "[!$count](#FFD740)"   # Amber A200 — uncommitted edits
+deleted    = "[✘$count](#FF5252)"   # Red A200 — destructive
+renamed    = "[»$count](#FF80AB)"   # Pink A200
+untracked  = "[?$count](#64FFDA)"   # Teal A200 — informational
+stashed    = "[\\$$count](#40C4FF)" # Light Blue A200
+ahead      = "[⇡$count](#69F0AE)"   # Green — good direction
+behind     = "[⇣$count](#FF5252)"   # Red — need to pull
+diverged   = "[⇕⇡$ahead_count⇣$behind_count](#FFD740)"  # Amber — careful
+conflicted = "[=$count](#FF5252)"   # Red — fix me

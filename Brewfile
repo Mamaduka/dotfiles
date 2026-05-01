@@ -11,12 +11,12 @@ brew 'httpie'
 brew 'tldr'
 brew 'svn'
 brew 'wp-cli'
+brew 'starship'
+brew 'zsh-autosuggestions'
 
 # Development
-brew 'php'
-brew 'php@8.1'
+brew 'php@8.3'
 brew 'composer'
-brew 'nginx'
 
 # Apps
 cask '1password'

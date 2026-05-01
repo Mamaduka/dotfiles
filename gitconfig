@@ -1,0 +1,22 @@
+[user]
+	name = George Mamadashvili
+	email = georgemamadashvili@gmail.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[push]
+	default = upstream
+	autoSetupRemote = true
+
+[rerere]
+	enabled = true
+
+[branch]
+	sort = -committerdate
+
+[pager]
+	branch = false

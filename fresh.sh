@@ -2,15 +2,22 @@
 
 echo "Setting up your Mac..."
 
-# Check for Oh My Zsh and install if we don't have it
-if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+# Symlink .zshrc from dotfiles
+if [ ! -L $HOME/.zshrc ]; then
+  rm -f $HOME/.zshrc
+  ln -s $DOTFILES/.zshrc $HOME/.zshrc
+fi
 
-  # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
-  rm -rf $HOME/.zshrc
-  ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+# Copy gitconfig template (not symlinked — per-machine signing key gets added directly).
+if [ ! -f $HOME/.gitconfig ]; then
+  cp $DOTFILES/gitconfig $HOME/.gitconfig
+fi
 
-  source $HOME/.zshrc
+# Symlink starship config
+mkdir -p $HOME/.config
+if [ ! -L $HOME/.config/starship.toml ]; then
+  rm -f $HOME/.config/starship.toml
+  ln -s $DOTFILES/starship.toml $HOME/.config/starship.toml
 fi
 
 # Check for Homebrew and install if we don't have it
@@ -28,10 +35,14 @@ brew update
 brew bundle --file $DOTFILES/Brewfile
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/valet
+composer global require laravel/valet
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Create a projects directory
-mkdir $HOME/Projects
+# Create site directories
+mkdir -p $HOME/Projects
+mkdir -p $HOME/Sites
+
+# Import iTerm2 color scheme (opens iTerm; manually select profile after).
+open $DOTFILES/duka.itermcolors

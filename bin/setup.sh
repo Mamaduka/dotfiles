@@ -40,9 +40,6 @@ cd $site_name
 status "➤ Link the current working directory to Valet."
 valet link
 
-status "➤ Creating database..."
-echo "CREATE DATABASE $site_name" | mysql -h127.0.0.1 -uroot
-
 status "➤ Installing WordPress..."
 wp core download
 wp config create --dbname=$site_name --dbuser=root --dbpass='' --dbhost=127.0.0.1 --extra-php <<PHP
@@ -63,6 +60,9 @@ if ( WP_DEBUG ) {
 	define( 'SCRIPT_DEBUG', true );
 }
 PHP
+
+status "➤ Creating database..."
+wp db create
 
 # Change admin user/pass as needed.
 wp core install --url=$site_name.test --title=$site_name --admin_user=mamaduka --admin_password=password --admin_email=george@mamaduka.com --skip-email

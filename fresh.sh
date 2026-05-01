@@ -20,6 +20,12 @@ if [ ! -L $HOME/.config/starship.toml ]; then
   ln -s $DOTFILES/starship.toml $HOME/.config/starship.toml
 fi
 
+# Symlink Ghostty config
+if [ ! -L $HOME/.config/ghostty ]; then
+  rm -rf $HOME/.config/ghostty
+  ln -s $DOTFILES/ghostty $HOME/.config/ghostty
+fi
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

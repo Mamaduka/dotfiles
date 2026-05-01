@@ -47,3 +47,4 @@ sh $DOTFILES/fresh.sh
 | `bin/setup.sh` | invoked by `wpsite` alias |
 | `bin/remove.sh` | invoked by `wpremove` alias |
 | `material-palette.itermcolors` | iTerm2 color scheme — modified [Material Design Colors](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Material%20Design%20Colors.itermcolors) using canonical [Material Design](https://m2.material.io/design/color/the-color-system.html) swatches (Blue Grey 900 bg, A200 accents). |
+| `ghostty/config` | Ghostty config — same Material palette as iTerm2 (symlinked to `~/.config/ghostty/config`). |

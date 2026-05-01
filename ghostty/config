@@ -1,0 +1,39 @@
+# Ghostty config — https://ghostty.org/docs/config
+# Mirrors the material-palette iTerm2 theme + JetBrainsMono Nerd Font.
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# Integrated tab strip in the title bar (Safari / iTerm2 style).
+macos-titlebar-style = tabs
+
+# Initial window size, in cells (cols × rows). Never restore prior size.
+window-width = 100
+window-height = 25
+window-save-state = never
+
+background = #263238
+foreground = #ECEFF1
+cursor-color = #EEEEEE
+selection-background = #607D8B
+selection-foreground = #ECEFF1
+
+# ANSI 0–7 (normal)
+palette = 0=#546E7A
+palette = 1=#FF5252
+palette = 2=#69F0AE
+palette = 3=#FFD740
+palette = 4=#40C4FF
+palette = 5=#FF4081
+palette = 6=#64FFDA
+palette = 7=#FFFFFF
+
+# ANSI 8–15 (bright)
+palette = 8=#B0BEC5
+palette = 9=#FF8A80
+palette = 10=#B9F6CA
+palette = 11=#FFE57F
+palette = 12=#80D8FF
+palette = 13=#FF80AB
+palette = 14=#A7FFEB
+palette = 15=#FFFFFF

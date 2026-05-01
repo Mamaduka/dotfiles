@@ -3,6 +3,7 @@
 
 font-family = "JetBrainsMono Nerd Font"
 font-size = 14
+font-thicken = true
 
 # Integrated tab strip in the title bar (Safari / iTerm2 style).
 macos-titlebar-style = tabs
@@ -17,6 +18,7 @@ foreground = #ECEFF1
 cursor-color = #EEEEEE
 selection-background = #607D8B
 selection-foreground = #ECEFF1
+background-opacity = 0.95
 
 # ANSI 0–7 (normal)
 palette = 0=#546E7A

@@ -7,6 +7,9 @@ setopt AUTO_CD AUTO_PUSHD PUSHD_IGNORE_DUPS
 setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE SHARE_HISTORY
 setopt EXTENDED_GLOB
 
+# Completions
+autoload -Uz compinit && compinit
+
 # Load custom config
 source $DOTFILES/path.zsh
 source $DOTFILES/aliases.zsh

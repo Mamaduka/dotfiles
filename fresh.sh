@@ -2,6 +2,11 @@
 
 echo "Setting up your Mac..."
 
+# Pull latest dotfiles before doing anything else.
+if [ -d "$DOTFILES/.git" ]; then
+  git -C "$DOTFILES" pull --ff-only
+fi
+
 # Symlink .zshrc from dotfiles
 if [ ! -L $HOME/.zshrc ]; then
   rm -f $HOME/.zshrc
@@ -40,15 +45,22 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew bundle --file $DOTFILES/Brewfile
 
-# Install global Composer packages
-composer global require laravel/valet
+# Install global Composer packages (skip if Valet already installed)
+if [ ! -f $HOME/.composer/vendor/bin/valet ]; then
+  composer global require laravel/valet
+fi
 
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
+# Install Laravel Valet (skip if already configured)
+if [ ! -d $HOME/.config/valet ]; then
+  $HOME/.composer/vendor/bin/valet install
+fi
 
 # Create site directories
 mkdir -p $HOME/Projects
 mkdir -p $HOME/Sites
 
-# Import iTerm2 color scheme (opens iTerm; manually select profile after).
-open $DOTFILES/material-palette.itermcolors
+# Import iTerm2 color scheme on first run only (marker file).
+if [ ! -f $DOTFILES/.iterm-imported ]; then
+  open $DOTFILES/material-palette.itermcolors
+  touch $DOTFILES/.iterm-imported
+fi

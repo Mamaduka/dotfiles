@@ -12,13 +12,28 @@ sh $DOTFILES/fresh.sh
 
 `fresh.sh` does:
 
+- Pulls latest dotfiles (`git pull --ff-only`)
 - Symlinks `.zshrc` → `$DOTFILES/.zshrc`
 - Copies `gitconfig` → `~/.gitconfig` (template, edit per-machine)
 - Symlinks `starship.toml` → `~/.config/starship.toml`
-- Installs Homebrew + everything in `Brewfile`
-- Installs Valet via Composer
+- Symlinks `ghostty/` → `~/.config/ghostty`
+- Installs Homebrew + everything in `Brewfile` (only missing items)
+- Installs Valet via Composer (only on first run)
 - Creates `~/Projects` and `~/Sites`
-- Imports iTerm2 color scheme (manual profile selection after)
+- Imports iTerm2 color scheme on first run only
+
+Re-run any time to sync the latest changes — fully idempotent, safe to run on demand.
+
+## Manual brew maintenance
+
+`fresh.sh` only installs missing packages. Run these manually as needed:
+
+```sh
+brew upgrade                   # upgrade everything to latest
+brew bundle cleanup --force    # uninstall packages no longer in Brewfile (destructive)
+brew autoremove                # remove orphaned dependencies
+brew doctor                    # diagnose problems
+```
 
 ## Manual post-install
 
